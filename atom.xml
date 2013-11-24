@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://kardesler.github.io/blog/atom.xml" rel="self"/>
   <link href="http://kardesler.github.io/blog/"/>
-  <updated>2013-11-25T00:18:11+02:00</updated>
+  <updated>2013-11-25T00:31:54+02:00</updated>
   <id>http://kardesler.github.io/blog/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,9 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Ssl Nedir]]></title>
+    <title type="html"><![CDATA[SSL NEDIR]]></title>
     <link href="http://kardesler.github.io/blog/blog/2013/11/24/ssl-nedir/"/>
-    <updated>2013-11-24T00:00:00+02:00</updated>
+    <updated>2013-11-24T23:42:29+02:00</updated>
     <id>http://kardesler.github.io/blog/blog/2013/11/24/ssl-nedir</id>
     <content type="html"><![CDATA[<p>SSL&#8217;in açık hali ile Secure Socket Layer, Türkçe karşılığı ise  Güvenli Giriş Katmanı dır. Ayrınıtılı bilgi için(<a href="http://tr.wikipedia.org/wiki/Secure_Sockets_Layer">http://tr.wikipedia.org/wiki/Secure_Sockets_Layer</a>)</p>
 

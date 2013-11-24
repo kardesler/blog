@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://kardesler.github.io/blog/atom.xml" rel="self"/>
   <link href="http://kardesler.github.io/blog/"/>
-  <updated>2013-11-24T23:46:42+02:00</updated>
+  <updated>2013-11-25T00:08:42+02:00</updated>
   <id>http://kardesler.github.io/blog/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,62 +14,77 @@
 
   
   <entry>
-    <title type="html"><![CDATA[SSL NEDIR]]></title>
+    <title type="html"><![CDATA[Ssl Nedir]]></title>
     <link href="http://kardesler.github.io/blog/blog/2013/11/24/ssl-nedir/"/>
-    <updated>2013-11-24T23:42:29+02:00</updated>
+    <updated>2013-11-24T00:00:00+02:00</updated>
     <id>http://kardesler.github.io/blog/blog/2013/11/24/ssl-nedir</id>
-    <content type="html"><![CDATA[<p>SSL NEDİR</p>
+    <content type="html"><![CDATA[<h1>SSL NEDİR</h1>
 
-<p>SSL&#8217;in açık hali ile Secure Socket Layer, Türkçe karşılığı ise  Güvenli Giriş Katmanı dır. Ayrınıtılı bilgi için(<a href="http://tr.wikipedia.org/wiki/Secure_Sockets_Layer">http://tr.wikipedia.org/wiki/Secure_Sockets_Layer</a>)
-SSL SERTİFİKASI NEDİR
-SSL Sertifikası istemciden sunucuya gönderilecek olan bilgilerin sadece isteği yapan sunucuda çözülebilecek (okunabilecek ) şekilde şifrelenmesini sağlar. Sertifikada kullanılan anahtarın uzunluğu şifrelemenin gücünü belirler.
-SSL TİPLERİ
-Aslında genel amaçları aynı olsada kullanım alanlarına göre farklılaşırlar:
-Domain SSL: Sadece bir domain için geçerli olan SSL sertifika türüdür, internet üzerinden hızlıca alınabilirler.
-Organization SSL: Bu tür SSL Sertifikaları özellikle kurumsal şirketler tarafından kullanılır, alabilmek için başvuruda bulunduktan sonra ayrı bir soruşturma aşamasından geçilmesi gerekir. Birden çok domain için kullanılabilir.
-Wildcard SSL:  Domain SSL den farklı olarak birden çok subdomain için de kullanabileceğiniz bir SSL türüdür. Örneğin hem abc.com hem x.abc.com hemde y.abc.com gibi tüm adresleri bir tek Wildcard sertifikası ile yönetebilirsiniz.
-Extended SSL:  Bunun diğer sertifikalardan farkı ise sıradan bir https bağlantılarda sadece (1) gibi görünürken bu tür sertifikalarda kuruluş ismi de şekildeki (2) gibi görünür olur.
-SSL SERTİFİKASI NASIL KURULUR
-Şimdi tüm bundan önceki anlattıklarımın tamamen konuya giriş amaçlı genel bilgilerdi. Asıl konu nasıl kurulumu yapacağımız. Şimdi
--Linux (Ubuntu) işletim sisteminde,
--nGinx sunucuda,
--Wildcard SSL Sertifikası&#8217;nın
--abc.com domaini ve x.abc.com, y.abc.com vb subdomain’leri için kurulumunu anlatacağım:</p>
+<p>SSL&#8217;in açık hali ile Secure Socket Layer, Türkçe karşılığı ise  Güvenli Giriş Katmanı dır. Ayrınıtılı bilgi için(<a href="http://tr.wikipedia.org/wiki/Secure_Sockets_Layer">http://tr.wikipedia.org/wiki/Secure_Sockets_Layer</a>)</p>
 
-<p>1-) Satın Alın:
- Önce bir SSL sertifikası almanız gerekiyor. Bunun için cheapssls  gibi bir site kullanabilirsiniz, ki bende oradan aldığım için dosya isimlerinde onların kullandığı notasyonu kullanacağım.</p>
+<h1>SSL SERTİFİKASI NEDİR</h1>
 
-<p>2-) Anahtarınızı Oluşturun:
- Sertifikayı siteden satın aldıktan sonra, sertifikanın çalışacağı domainden herhangi bir eposta adresine doğrulama maili gelecektir, onu onaylayın(Bu adım sadece cheapssl için geçerli olabilir). SSL sertifikanızı oluşturmak için önce Linux makinanızda
-openssl req -new -newkey rsa:2048 -nodes -keyout abc.com.key -out abc.com.csr<br/>
-komutunu çalıştırın. Bu komut sunucunuza özel bir anahtar (key) oluşturacaktır. Bu komutu çalıştırınca anahtarı oluştururken aşağıdaki soruları cevaplayacaksınız:
-&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</p>
+<p>SSL Sertifikası istemciden sunucuya gönderilecek olan bilgilerin sadece isteği yapan sunucuda çözülebilecek (okunabilecek ) şekilde şifrelenmesini sağlar. Sertifikada kullanılan anahtarın uzunluğu şifrelemenin gücünü belirler.</p>
 
-<h2>writing new private key to &lsquo;abc.com.key&rsquo;</h2>
+<h1>SSL TİPLERİ</h1>
 
-<p>You are about to be asked to enter information that will be incorporated
-into your certificate request.
-What you are about to enter is what is called a Distinguished Name or a DN.
-There are quite a few fields but you can leave some blank
-For some fields there will be a default value,</p>
+<p>Aslında genel amaçları aynı olsada kullanım alanlarına göre farklılaşırlar:</p>
 
-<h2>If you enter &lsquo;.&rsquo;, the field will be left blank.</h2>
+<p>Domain SSL: Sadece bir domain için geçerli olan SSL sertifika türüdür, internet üzerinden hızlıca alınabilirler.</p>
 
-<p>Country Name (2 letter code) [AU]:TR
-State or Province Name (full name) [Some-State]:
-Locality Name (eg, city) []:ISTANBUL
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:KARDESLER
-Organizational Unit Name (eg, section) []:IT
-Common Name (e.g. server FQDN or YOUR name) []:*.abc.com
-Email Address []:<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x61;&#x64;&#x6d;&#105;&#x6e;&#64;&#x61;&#x62;&#x63;&#x2e;&#99;&#x6f;&#109;">&#x61;&#100;&#109;&#x69;&#x6e;&#64;&#97;&#98;&#x63;&#46;&#99;&#111;&#x6d;</a></p>
+<p>Organization SSL: Bu tür SSL Sertifikaları özellikle kurumsal şirketler tarafından kullanılır, alabilmek için başvuruda bulunduktan sonra ayrı bir soruşturma aşamasından geçilmesi gerekir. Birden çok domain için kullanılabilir.</p>
 
-<p>Please enter the following &lsquo;extra&rsquo; attributes
-to be sent with your certificate request
-A challenge password []:sifreBurayaYazılacak
-An optional company name []:KARDESLER</p>
+<p>Wildcard SSL:  Domain SSL den farklı olarak birden çok subdomain için de kullanabileceğiniz bir SSL türüdür. Örneğin hem abc.com hem x.abc.com hemde y.abc.com gibi tüm adresleri bir tek Wildcard sertifikası ile yönetebilirsiniz.</p>
 
-<p>Bu sorulara gerekli cevapları veriyoruz ancak en önemli soru Common Name. Wildcard SSL kuruduğumuz için bu alana SSL i aldığımız domainin adını başında yıldız olacak şekilde *.abc.com gibi giriyoruz. Bu işlem sonunda anahtarımız artık oluşmuş olacaktır. “abc.xom.key“ adlı dosyanın içindeki bu anahtarı almak için dosyayı<br/>
-vim abc.com.key
+<p>Extended SSL:  Bunun diğer sertifikalardan farkı ise sıradan bir https bağlantılarda sadece (1) gibi görünürken bu tür sertifikalarda kuruluş ismi de şekildeki (2) gibi görünür olur.</p>
+
+<h1>SSL SERTİFİKASI NASIL KURULUR</h1>
+
+<p>Şimdi tüm bundan önceki anlattıklarımın tamamen konuya giriş amaçlı genel bilgilerdi. Asıl konu nasıl kurulumu yapacağımız. Şimdi;<br> <br>
+-Linux (Ubuntu) işletim sisteminde,<br>
+-nGinx sunucuda,<br>
+-Wildcard SSL Sertifikası&#8217;nın<br>
+-abc.com domaini ve x.abc.com, y.abc.com vb subdomain’leri için kurulumunu anlatacağım:<br></p>
+
+<h1>1-) Satın Alın:</h1>
+
+<p> Önce bir SSL sertifikası almanız gerekiyor. Bunun için cheapssls  gibi bir site kullanabilirsiniz, ki bende oradan aldığım için dosya isimlerinde onların kullandığı notasyonu kullanacağım.</p>
+
+<h1>2-) Anahtarınızı Oluşturun:</h1>
+
+<p> Sertifikayı siteden satın aldıktan sonra, sertifikanın çalışacağı domainden herhangi bir eposta adresine doğrulama maili gelecektir, onu onaylayın(Bu adım sadece cheapssl için geçerli olabilir). SSL sertifikanızı oluşturmak için önce Linux makinanızda <br><br></p>
+
+<pre><code>openssl req -new -newkey rsa:2048 -nodes -keyout abc.com.key -out abc.com.csr
+</code></pre>
+
+<br><br>komutunu çalıştırın. Bu komut sunucunuza özel bir anahtar (key) oluşturacaktır. Bu komutu çalıştırınca anahtarı oluştururken aşağıdaki soruları cevaplayacaksınız:<br><br>
+
+
+<pre><code>.............................................&lt;br&gt;
+writing new private key to 'abc.com.key'&lt;br&gt;
+.....&lt;br&gt;&lt;br&gt;
+You are about to be asked to enter information that will be incorporated&lt;br&gt;
+into your certificate request.&lt;br&gt;
+What you are about to enter is what is called a Distinguished Name or a DN.&lt;br&gt;
+There are quite a few fields but you can leave some blank&lt;br&gt;
+For some fields there will be a default value,&lt;br&gt;
+If you enter '.', the field will be left blank.&lt;br&gt;
+.....&lt;br&gt;&lt;br&gt;
+Country Name (2 letter code) [AU]:TR&lt;br&gt;&lt;br&gt;
+State or Province Name (full name) [Some-State]:&lt;br&gt;&lt;br&gt;
+Locality Name (eg, city) []:ISTANBUL&lt;br&gt;&lt;br&gt;
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:KARDESLER&lt;br&gt;&lt;br&gt;
+Organizational Unit Name (eg, section) []:IT&lt;br&gt;&lt;br&gt;
+Common Name (e.g. server FQDN or YOUR name) []:*.abc.com&lt;br&gt;&lt;br&gt;
+Email Address []:admin@abc.com&lt;br&gt;&lt;br&gt;
+Please enter the following 'extra' attributes&lt;br&gt;
+to be sent with your certificate request&lt;br&gt;
+A challenge password []:sifreBurayaYazılacak&lt;br&gt;
+An optional company name []:KARDESLER&lt;br&gt;
+</code></pre>
+
+<p>Bu sorulara gerekli cevapları veriyoruz ancak en önemli soru Common Name. Wildcard SSL kuruduğumuz için bu alana SSL i aldığımız domainin adını başında yıldız olacak şekilde *.abc.com gibi giriyoruz. Bu işlem sonunda anahtarımız artık oluşmuş olacaktır. “abc.xom.key“ adlı dosyanın içindeki bu anahtarı almak için dosyayı <br><br>
+vim abc.com.key<br><br>
 komutu ile açabilirsiniz (vim yüklü ise yoksa cat gibi basic komutları kullanbilirsiniz). İçeriğinin şu şekilde birşey olması gerekliyor :</p>
 
 <p>&mdash;&mdash;-BEGIN PRIVATE KEY&mdash;&mdash;&ndash;
@@ -82,10 +97,10 @@ ojIYMeEiyGYwZU2V3cO334Af0q4xfHYpN586FdfU0KPqaRZRjiPPv507gDDuBZ+g
 &hellip;
 zawjZ/NJMFOfUteKTtSzgDBvkVepYSxFubuCH9621iWHT4OhG94HquI5htWv/vpH
 oe3VUgREVkek8qqpTFTlNuC/wHV+CspDs3TIqJFOCqOjsxp8GMdTChe8hJ9xhgu9
-0i9uIvyFI/daxukj0QlZsof8
+0i9uIvyFI/daxukj0QlZsof8<br>
 &mdash;&mdash;-END PRIVATE KEY&mdash;&mdash;&ndash;</p>
 
-<p> Bu key&#8217;i SSL sertifikasını satın aldığınız site gidip gerekli yere eklemeniz gerekcektir. Dikkat ederseniz SSL&#8217;i satın aldık ancak daha henüz hiçbir belge yada şifre vb bir şey almadık. Sadece kendi sunucumuzun &ldquo;nufus cüzdanını&rdquo; oluşturduk ve kimlik numaramızı SSL sertfikasını aldığımız siteye verdik. İşte bundan sonra SSL sağlayıcıları size bir takım anahtarlar göndercektir.</p>
+<p> Bu key&#8217;i SSL sertifikasını satın aldığınız site gidip gerekli yere eklemeniz gerekcektir. Dikkat ederseniz SSL&#8217;i satın aldık ancak daha henüz hiçbir belge yada şifre vb bir şey almadık. Sadece kendi sunucumuzun &ldquo;nufus cüzdanını&rdquo; oluşturduk ve kimlik numaramızı SSL sertfikasını aldığımız siteye verdik. İşte bundan sonra SSL sağlayıcıları size bir takım anahtarlar gönderecektir.</p>
 
 <p>3-) Sizin anahtarınızı göndermenizden sonra SSL sağlayıcınız size 3 farklı dosya gönderecektir(Yine cheapssl için geçerli olabilir). Bu dosyların isimleri</p>
 
@@ -97,9 +112,10 @@ oe3VUgREVkek8qqpTFTlNuC/wHV+CspDs3TIqJFOCqOjsxp8GMdTChe8hJ9xhgu9
 
 <p>Burada ufak bir püf noktası ise sertifika zincirini (certificate chains) oluşturmaktır. Bu zincir bazı browserların sertifikanızı okurken problem çıkarmasını engelleyecektir ve aslında karışık olan bu işin çözümü şu linux kodlarında gizlidir :</p>
 
-<p>cat abc.crt > abc.pem
-cat PositiveSSLCA2.crt >> abc.pem
-cat AddTrustExternalCARoot.crt >> abc.pem</p>
+<pre><code>cat abc.crt &gt; abc.pem
+cat PositiveSSLCA2.crt &gt;&gt; abc.pem
+cat AddTrustExternalCARoot.crt &gt;&gt; abc.pem
+</code></pre>
 
 <p>Bu işlemler ile aslıdan elinizdeki 3 dosyayı  tek dosya haline getirmiş oluyorsunuz. Benim karşılaştığım bir kaç sorunu yazmak gerekirse,
 -Elle kopyalama yaparsanız size manalı görünmesede olan hiç bir şeyi silmediğinizden yada birşey eklemediğinizden emin olun, buna boşluk, tab yada &ndash; de dahil.</p>
@@ -108,30 +124,29 @@ cat AddTrustExternalCARoot.crt >> abc.pem</p>
 
 <p>Bu işlemden sonra pem dosyamız kullanıma hazırdır.</p>
 
-<pre><code>4-) Seritifkanızı web sunucunuza tanıtın:
-Bahsettiğim gibi pem ve key dosyalarımızı  nGinx sunucumuzun konfigürasyon dosyasına ekleyeceğiz. Böylece 443 portundan giden-gelen isteklerde bu dosyalara kullanılacaktır. Konfigürasyon dosyasına eklerken özellikle doğru port için eklediğinize emin olun :
-</code></pre>
+<h1>4-) Sertifikanızı web sunucunuza tanıtın:</h1>
 
-<p>server {</p>
+<p>Bahsettiğim gibi pem ve key dosyalarımızı  nGinx sunucumuzun konfigürasyon dosyasına ekleyeceğiz. Böylece 443 portundan giden-gelen isteklerde bu dosyalara kullanılacaktır. Konfigürasyon dosyasına eklerken özellikle doğru port için eklediğinize emin olun :</p>
 
-<pre><code>listen 443;
+<pre><code>server {
+listen 443;
 ssl on;
 ssl_certificate /path/to/the_domain.pem;
 ssl_certiticate_key /path/to/the_domain.key 
+...
+}
 </code></pre>
-
-<p>  &hellip;
-}</p>
 
 <p>Bununla birlikte kurulumu tamamladık. Artık</p>
 
-<p>service nginx restart</p>
+<pre><code>service nginx restart 
+</code></pre>
 
 <p>komutu ile nginx i tekrar başlatırsanız domaininiz artık https olarakta hizmet vermeye başlayacaktır. Eğer sistem tarafı ile çok aranız yoksa, birinin gözetiminde bunları yapmanızı tavsiye ederim, nginx tekrar baştamazsanız sunucu isteklere cevap vermeyecektir. Bunun için kendinizi garantiye alıp önce konfigürasyon ayarlarını değiştirmeden sunucuyu restart edin, eğer restart başarılı olursa o zaman yukardaki ayarları yapıp deneyin. Bir sorun olursa tekrar conf ayarlarını eski haline alıp restart edebilirsiniz.</p>
 
-<p>Testi nasıl yapılır</p>
+<h1>Testi nasıl yapılır</h1>
 
-<p>Sitenizin ssl sertifikasını kontrol etmek için zaten <a href="https://abc.com">https://abc.com</a> adresine girersiniz ancak <a href="https://www.ssllabs.com">https://www.ssllabs.com</a> gibi bir &ldquo;ssl checker&rdquo; sizin için herşeyin testini yapacaktır. SSL zincirinizide buradan kontrol edebilirsinizi.</p>
+<p>Sitenizin ssl sertifikasını kontrol etmek için zaten <a href="https://abc.com">https://abc.com</a> adresine girersiniz ancak <a href="https://www.ssllabs.com">https://www.ssllabs.com</a> gibi bir &ldquo;ssl checker&rdquo; sizin için herşeyin testini yapacaktır. SSL zincirinizide buradan kontrol edebilirsiniz.</p>
 ]]></content>
   </entry>
   

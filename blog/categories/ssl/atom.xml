@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SSL | My Octopress Blog]]></title>
   <link href="http://kardesler.github.io/blog/blog/categories/ssl/atom.xml" rel="self"/>
   <link href="http://kardesler.github.io/blog/"/>
-  <updated>2013-11-25T00:33:09+02:00</updated>
+  <updated>2013-11-25T00:37:10+02:00</updated>
   <id>http://kardesler.github.io/blog/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -149,6 +149,8 @@ ssl_certiticate_key /path/to/the_domain.key
 <h2>Testi nasıl yapılır</h2>
 
 <p>Sitenizin ssl sertifikasını kontrol etmek için zaten <a href="https://abc.com">https://abc.com</a> adresine girersiniz ancak <a href="https://www.ssllabs.com">https://www.ssllabs.com</a> gibi bir &ldquo;ssl checker&rdquo; sizin için herşeyin testini yapacaktır. SSL zincirinizide buradan kontrol edebilirsiniz.</p>
+
+<p><blockquote><p>Let it be social</p><footer><strong>Mehmet Sinan Toktay</strong> <cite>SociaPlus</cite></footer></blockquote></p>
 ]]></content>
   </entry>
   

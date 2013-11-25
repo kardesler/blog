@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://kardesler.github.io/blog/atom.xml" rel="self"/>
   <link href="http://kardesler.github.io/blog/"/>
-  <updated>2013-11-25T13:19:53+02:00</updated>
+  <updated>2013-11-25T13:25:52+02:00</updated>
   <id>http://kardesler.github.io/blog/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -36,9 +36,9 @@
 
 <p><b>Extended SSL:</b>  Bunun diğer sertifikalardan farkı ise sıradan bir https bağlantılarda sadece (1) gibi görünürken bu tür sertifikalarda kuruluş ismi de şekildeki (2) gibi görünür olur.</p>
 
-<p>(1)<img src="http://kardesler.github.io/blog/images/1.png" /></p>
+<p>(1)<img src="https://github.com/kardesler/blog/blob/gh-pages/images/1.PNG" /></p>
 
-<p>(2)<img src="http://kardesler.github.io/blog/images/2.png" /></p>
+<p>(2)<img src="{https://github.com/kardesler/blog/blob/gh-pages/images/2.PNG" /></p>
 
 <h2>SSL SERTİFİKASI NASIL KURULUR</h2>
 

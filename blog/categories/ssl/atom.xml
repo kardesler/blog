@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SSL | My Octopress Blog]]></title>
   <link href="http://kardesler.github.io/blog/blog/categories/ssl/atom.xml" rel="self"/>
   <link href="http://kardesler.github.io/blog/"/>
-  <updated>2013-11-25T13:14:16+02:00</updated>
+  <updated>2013-11-25T13:15:00+02:00</updated>
   <id>http://kardesler.github.io/blog/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -83,7 +83,7 @@ An optional company name []:KARDESLER
 
 <p>Bu sorulara gerekli cevapları veriyoruz ancak en önemli soru Common Name. Wildcard SSL kuruduğumuz için bu alana SSL i aldığımız domainin adını başında yıldız olacak şekilde *.abc.com gibi giriyoruz. Bu işlem sonunda anahtarımız artık oluşmuş olacaktır. “abc.xom.key“ adlı dosyanın içindeki bu anahtarı almak için dosyayı <br><br></p>
 
-<pre><code>vim abc.com.key&lt;br&gt;&lt;br&gt;
+<pre><code>vim abc.com.key
 </code></pre>
 
 <p>komutu ile açabilirsiniz (vim yüklü ise yoksa cat gibi basic komutları kullanbilirsiniz). İçeriğinin şu şekilde birşey olması gerekliyor :</p>
